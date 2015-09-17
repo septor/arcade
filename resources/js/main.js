@@ -1,32 +1,11 @@
 $(document).ready(function(){
-
-
-
+  
     //mobile menu toggling
     $("#menu_icon").click(function(){
         $("header nav ul").toggleClass("show_menu");
         $("#menu_icon").toggleClass("close_menu");
         return false;
     });
-
-
-
-    //Contact Page Map Centering
-    var hw = $('header').width() + 50;
-    var mw = $('#map').width();
-    var wh = $(window).height();
-    var ww = $(window).width();
-
-    $('#map').css({
-        "max-width" : mw,
-        "height" : wh
-    });
-
-    if(ww>1100){
-         $('#map').css({
-            "margin-left" : hw
-        });
-    }
 
     //Mouseover Thumbnail Focus
     var thumbImage = $('.thumb a');

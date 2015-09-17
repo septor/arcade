@@ -11,8 +11,6 @@ else
 	die("Error: Configuration file not found. Are you sure you followed the installation instructions?");
 }
 define("IMAGE_BASE", "data/img/");
-define("CSS_BASE", "resources/css/");
-define("JS_BASE", "resources/js/");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,7 +18,7 @@ define("JS_BASE", "resources/js/");
 	<title><?php echo $general->siteName." - ".$general->siteTag; ?></title>
 	<meta charset="utf-8">
 	<meta name="author" content="<?php echo $general->siteOwner; ?>">
-	<meta name="description" content="Photo Gallery powered by Arcade; http://github.com/septor/arcade/"/>
+	<meta name="description" content="Photo Gallery powered by Arcade; http://github.com/trickmod/arcade/"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="resources/css/reset.css">
@@ -59,7 +57,6 @@ define("JS_BASE", "resources/js/");
 		<div class="footer clearfix">
 			<ul class="social clearfix">
 				<?php
-
 				echo (!empty($social->facebook) ? '<li><a href="http://facebook.com/'.$social->facebook.'" data-title="Facebook"><i class="fa fa-facebook"></i></a></li>' : '');
 				echo (!empty($social->googleplus) ? '<li><a href="http://plus.google.com/u/0/'.$social->googleplus.'" data-title="Google+"><i class="fa fa-google-plus"></i></a></li>' : '');
 				echo (!empty($social->behance) ? '<li><a href="http://behance.net/'.$social->behance.'" data-title="Behance"><i class="fa fa-behance"></i></a></li>' : '');
@@ -84,8 +81,6 @@ define("JS_BASE", "resources/js/");
 
 	<section class="main clearfix">
 		<?php
-		// TODO: Gather the selected category for displaying
-
 		$allCats = array();
 
 		if(isset($_GET['cat']))

@@ -1,12 +1,7 @@
 /*
-
     Template Author : pixelhint.com
     Author Email    : contact@pixelhint.com
     Template Name   : Magnetic
-
-
-    *****************************************
-
 
     - Fonts
     - General CSS
@@ -16,8 +11,6 @@
     - Map/Contact page
     - Tooltip
     - Responsive code
-
-
 */
 
 /*  Fonts  */
@@ -30,7 +23,6 @@
          url('../fonts/raleway-regular.svg#ralewayregular') format('svg');
     font-weight: normal;
     font-style: normal;
-
 }
 
 @font-face {
@@ -42,7 +34,6 @@
          url('../fonts/raleway-bold.svg#ralewaybold') format('svg');
     font-weight: normal;
     font-style: normal;
-
 }
 
 @font-face {
@@ -55,7 +46,6 @@
     font-weight: normal;
     font-style: normal;
 }
-
 
 /*  General CSS*/
 body{
@@ -102,7 +92,6 @@ h5, h6          { font-weight: bolder }
 .clearfix {
     *zoom: 1;
 }
-
 
 /*  Header  */
 @media (min-width:1099px){
@@ -220,11 +209,6 @@ h5, h6          { font-weight: bolder }
     background-position: -41px 0!important;
 }
 
-
-
-
-
-
 /*  Main  */
 .main{
     width: 100%;
@@ -255,161 +239,6 @@ h5, h6          { font-weight: bolder }
 
     vertical-align: middle;
 }
-
-
-/*  Inner Page  */
-.top{
-    width: 100%;
-    height: 350px;
-    overflow: hidden;
-    display: block;
-    position: relative;
-    background: url('../../data/img/hero_image.jpg') no-repeat;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-position: 50% 50%;
-}
-
-.work_nav{
-    display: block;
-    width: 100%;
-}
-
-.work_nav .btn{
-    float: right;
-}
-
-.work_nav ul{
-    list-style: none;
-}
-
-.work_nav ul li{
-    display: block;
-    float: left;
-    margin: 0 0 1px 1px;
-    position: relative;
-}
-
-.work_nav a{
-    display: block;
-    width: 40px;
-    height: 40px;
-    background: url('../../data/img/p_navigation.png') no-repeat;
-    background-position: 0 0;
-}
-
-.work_nav a.previous{
-    background-position: 0 0;
-}
-
-.work_nav a.grid{
-    background-position: -41px 0;
-}
-
-.work_nav a.next{
-    background-position: -82px 0;
-}
-
-.top .title{
-    display: block;
-    width: 100%;color: #4b4848;
-    font-family: "raleway-bold", arial;
-    font-size: 26px;
-    font-weight: bold;
-    background: rgba(255, 255, 255, .7);
-    padding: 20px;
-    text-transform: uppercase;
-    line-height: 30px;
-    margin: 0!important;
-    overflow: hidden;
-
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    box-sizing: border-box;
-
-}
-
-.content_header{
-    position: absolute;
-    bottom: 0;
-    margin: 0 auto;
-    left: 50%;
-    margin-left: -46.36363636363637%;
-}
-
-.content{
-    color: #4b4848;
-    font-family: "raleway-regular", arial;
-    font-size: 15px;
-    line-height: 22px;
-    padding: 60px 30px;
-    background: #fff;
-
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-.content p{
-    color: #4b4848;
-    font-family: "raleway-regular", arial;
-    font-size: 15px;
-    line-height: 24px;
-    margin-bottom: 60px;
-}
-
-.content h1,
-.content h2,
-.content h3,
-.content h4,
-.content h5,
-.content h6{
-    color: #4b4848;
-    font-family: "raleway-semibold", arial;
-    font-weight: bold;
-    line-height: 28px;
-    margin-bottom: 30px;
-
-}
-
-
-
-
-
-
-
-/*  Contact page map  */
-#map .map_adresse{
-    font-family: 'raleway-regular', arial;
-    font-size: 14px;
-    line-height: 22px;
-    letter-spacing: 1px;
-}
-
-#map .map_address,
-#map .map_tel{
-    padding: 5px;
-}
-
-#map .map_address .address,
-#map .map_tel .tel{
-    font-family: 'raleway-bold', arial;
-    font-weight: bolder;
-}
-
-#map img{
-    max-width: none;
-}
-
-
-
-
-
-
 
 /*  Tooltip  */
 .tooltip{
@@ -442,12 +271,6 @@ h5, h6          { font-weight: bolder }
     left: 50%;
     margin-left: -3px;
 }
-
-
-
-
-
-
 
 /*  Responsive code  */
 @media (max-width:1099px){

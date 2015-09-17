@@ -1,21 +1,20 @@
 # ARCADE - Photo Gallery
 
-Arcade is a photo gallery powered by PHP and using an XML file for configuration. No databases are required. GD2 is used to generate thumbnails. For a list of version requirements see below.
+Arcade is a photo gallery powered by PHP and using an XML file for configuration. No databases are required. For a list of version requirements see below.
 
 ## Requirements
 
-Arcade was developed on Nginx 1.9.4, PHP 5.5.28, and GD 2.1.0.
+Arcade was developed on Nginx 1.9.4 and PHP 5.5.28.
+
 There's no code that should hinder it's operation on Apache servers.
 
 **Recommended**
 
 * PHP 5.5+
-* GD 2.1+
 
 **Minimum**
 
 * PHP 5.4+ (earlier versions may work, but are untested/unsupported)
-* GD 2.1+
 
 ## Installation
 
