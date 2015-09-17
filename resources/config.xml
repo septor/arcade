@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<general>
+		<siteName>Arcade</siteName>
+		<siteTag>Photo Gallery</siteTag>
+		<siteOwner>Patrick Weaver</siteOwner>
+		<siteEmail>patrickweaver@gmail.com</siteEmail>
+	</general>
+
+	<social>
+		/*
+		These are your usernames in most cases.
+		If you're unsure how it works just insert a value to see how the link is generated.
+		A wiki article (or readme section) will be created to show these off.
+		Values may be adjusted later on.
+		*/
+		<fhpx></fhpx> /*500px*/
+		<facebook></facebook>
+		<googleplus></googleplus>
+		<twitter></twitter>
+		<instagram></instagram>
+		<dribbble></dribbble>
+		<behance></behance>
+		<github></github>
+		<lastfm></lastfm>
+		<flickr></flickr>
+		<twitch></twitch>
+		<youtube></youtube>
+	</social>
+</config>
