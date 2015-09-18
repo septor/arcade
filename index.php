@@ -97,27 +97,18 @@ $gallery = new Gallery();
 				$catsToDisplay = explode(",", $_GET['cat']);
 			}
 
-			$images = array();
-
 			foreach($catsToDisplay as $catToDisplay)
 			{
-				foreach(glob(IMAGE_BASE.$catToDisplay."/*.{jpg,jpeg,gif,png}", GLOB_BRACE) as $image_file)
+				foreach($gallery->importFromDir($catToDisplay) as $image)
 				{
-					array_push($images, $catToDisplay.",".str_replace(IMAGE_BASE.$catToDisplay."/", "", $image_file));
+					echo '
+				<div class="thumb">
+					<a class="popup" href="'.$image.'">
+						<img src="'.$image.'" class="media" alt=""/>
+					</a>
+				</div>
+					';
 				}
-			}
-
-			foreach($images as $imageArray)
-			{
-				$image = explode(",", $imageArray);
-
-				echo '
-			<div class="thumb">
-				<a class="popup" href="data/img/'.$image[0].'/'.$image[1].'">
-					<img src="data/img/'.$image[0].'/'.$image[1].'" class="media" alt=""/>
-				</a>
-			</div>
-				';
 			}
 		}
 		else

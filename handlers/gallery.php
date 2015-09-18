@@ -27,7 +27,7 @@ class Gallery
 
       foreach(glob(IMAGE_BASE.$directory."*.{".$extensions."}", GLOB_BRACE) as $file)
       {
-        array_push($files, $directory.",".$file);
+        array_push($files, $file);
       }
 
       return $files;
