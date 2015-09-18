@@ -11,6 +11,10 @@ else
 	die("Error: Configuration file not found. Are you sure you followed the installation instructions?");
 }
 define("IMAGE_BASE", "data/img/");
+
+include("handlers/gallery.php");
+$gallery = new Gallery();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -40,13 +44,12 @@ define("IMAGE_BASE", "data/img/");
 					<ul id="categories">
 						<li><a href="?cat=all">View All</a></li>
 						<?php
-						$categories = scandir('data/img');
+						//$categories = scandir('data/img');
+						$categories = $gallery->fetchCategories();
+
 						foreach($categories as $category)
 						{
-						  if(!strpos($category, ".") && $category != "." && $category != "..")
-						  {
-						    echo '<li><a href="?cat='.$category.'">'.$category.'</a></li>';
-						  }
+						  echo '<li><a href="?cat='.$category.'">'.$category.'</a></li>';
 						}
 						?>
 					</ul>
@@ -87,16 +90,7 @@ define("IMAGE_BASE", "data/img/");
 		{
 			if($_GET['cat'] == "all")
 			{
-				$cats = scandir('data/img');
-				foreach($cats as $cat)
-				{
-					if(!strpos($cat, ".") && $cat != "." && $cat != "..")
-					{
-						array_push($allCats, $cat);
-					}
-				}
-
-				$catsToDisplay = $allCats;
+				$catsToDisplay = $gallery->fetchCategories();
 			}
 			else
 			{
