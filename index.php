@@ -2,7 +2,6 @@
 if(file_exists("data/config.xml"))
 {
 	$config = simplexml_load_file("data/config.xml");
-
 	$social = $config->social;
 	$general = $config->general;
 }
@@ -40,7 +39,7 @@ $gallery = new Gallery();
 			<ul>
 				<li><a href="./" class="selected">Home</a></li>
 				<li>
-					<a href="#" class="expandCat">Categories</a>
+					<a class="expandCat">Categories</a>
 					<ul id="categories">
 						<li><a href="?cat=all">View All</a></li>
 						<?php
@@ -85,8 +84,6 @@ $gallery = new Gallery();
 		<?php
 		if(isset($_GET['cat']))
 		{
-			//$displayCat = $_GET['cat'];
-
 			if($_GET['cat'] == "all")
 			{
 				$catsToDisplay = $gallery->fetchCategories();
@@ -112,10 +109,20 @@ $gallery = new Gallery();
 		}
 		else
 		{
-			echo "No categories selected. Or you're visiting the index page. Select a category.<br />
-			<i>This is being worked on to have content. Stay tuned.</i>";
+			echo '
+			<section class="top">
+			<div class="wrapper content_header clearfix">
+				<h1 class="title">Welcome to '.$general->siteName.'!</h1>
+			</div>
+			</section>
+			<section class="wrapper">
+						<div class="content">
+							<h2>Front Page Post!</h2>
+							<p>This is the front page, which is displayed if no categories are selected or if you click the "Home" menu item.</p>
+						</div>
+					</section>
+			';
 		}
-
 		?>
 	</section>
 
