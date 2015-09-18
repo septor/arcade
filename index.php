@@ -44,7 +44,6 @@ $gallery = new Gallery();
 					<ul id="categories">
 						<li><a href="?cat=all">View All</a></li>
 						<?php
-						//$categories = scandir('data/img');
 						$categories = $gallery->fetchCategories();
 
 						foreach($categories as $category)
@@ -84,10 +83,10 @@ $gallery = new Gallery();
 
 	<section class="main clearfix">
 		<?php
-		$allCats = array();
-
 		if(isset($_GET['cat']))
 		{
+			//$displayCat = $_GET['cat'];
+
 			if($_GET['cat'] == "all")
 			{
 				$catsToDisplay = $gallery->fetchCategories();
@@ -113,7 +112,8 @@ $gallery = new Gallery();
 		}
 		else
 		{
-			echo "No image categories selected to display.";
+			echo "No categories selected. Or you're visiting the index page. Select a category.<br />
+			<i>This is being worked on to have content. Stay tuned.</i>";
 		}
 
 		?>
