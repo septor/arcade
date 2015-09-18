@@ -107,7 +107,7 @@ define("IMAGE_BASE", "data/img/");
 
 			foreach($catsToDisplay as $catToDisplay)
 			{
-				foreach(glob("{".IMAGE_BASE.$catToDisplay."/*.jpg,".IMAGE_BASE.$catToDisplay."/*.jpeg,".IMAGE_BASE.$catToDisplay."/*.gif,".IMAGE_BASE.$catToDisplay."/*.png}", GLOB_BRACE) as $image_file)
+				foreach(glob(IMAGE_BASE.$catToDisplay."/*.{jpg,jpeg,gif,png}", GLOB_BRACE) as $image_file)
 				{
 					array_push($images, $catToDisplay.",".str_replace(IMAGE_BASE.$catToDisplay."/", "", $image_file));
 				}
