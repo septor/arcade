@@ -27,4 +27,8 @@
 		<twitch></twitch>
 		<youtube></youtube>
 	</social>
+
+	<thirdPartyImages>
+		<instagram enabled="false" imagesToDisplay="10" />
+	</thirdPartyImages>
 </config>

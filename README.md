@@ -2,7 +2,7 @@
 
 Arcade is a photo gallery powered by PHP and using an XML file for configuration. No databases are required. For a list of version requirements see below.
 
-## Requirements
+# Requirements
 
 Arcade was developed on Nginx 1.9.4 and PHP 5.5.28.
 
@@ -16,14 +16,32 @@ There's no code that should hinder it's operation on Apache servers.
 
 * PHP 5.4+ (earlier versions may work, but are untested/unsupported)
 
-## Installation
+# Installation
 
 1. Download the package from the releases section.
 2. Unzip and upload it to your desired location.
 3. Copy the `/resources/config.xml` file over to `/data/config.xml` and make relevant changes.
 4. Upload all your images into the `/data/img` directory. Make sure you create subdirectories for your categories. Only images in a subcategory, regardless of it's name, will be displayed.
 
-## Credits
+# Third Party Images
+
+You can utilize third party image storing services to display some of your pictures. Currently only Instagram is supported, but more will likely come. Below are instructions on how to utilize each supported service.
+
+## Instagram
+
+You'll need your `client_id` and `access_token` in order to retrieve your images. Someone wrote a script to do that, [here](https://api.instagram.com/oauth/authorize/?client_id=ab103e54c54747ada9e807137db52d77&redirect_uri=http://blueprintinteractive.com/tutorials/instagram/uri.php&response_type=code), but I cannot validate the usage of your data. You can alternatively access those items by reading [this page](https://instagram.com/developer/authentication/).
+
+Once you've obtained these items you'll need to open the `/data/tokens.php` file and insert the required information. Now you need to update your `/data/config.xml` file to include the added entries:
+
+```
+<thirdPartyImages>
+  <instagram enabled="false" imagesToDisplay="10" />
+</thirdPartyImages>
+```
+
+Obviously you'll want to change the enabled parameter to true, and increase or decrease the number to display to your desired amount.
+
+# Credits
 
 Below is a list of open source, or freely obtainable, projects used to make Arcade what it is. In some cases the beginning item has been heavily modified to suit the needs of the project. I have made notes next to each item to indicate that the version you look into may not function like it functions in Arcade.
 

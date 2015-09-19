@@ -49,6 +49,10 @@ $gallery = new Gallery();
 						{
 						  echo '<li><a href="?cat='.$category.'">'.$category.'</a></li>';
 						}
+						if($config->thirdPartyImages->instagram['enabled'] == "true")
+						{
+							echo '<li><a href="?cat=instagram">Instagram</a></li>';
+						}
 						?>
 					</ul>
 				</li>
@@ -87,6 +91,10 @@ $gallery = new Gallery();
 			if($_GET['cat'] == "all")
 			{
 				$catsToDisplay = $gallery->fetchCategories();
+				if($config->thirdPartyImages->instagram['enabled'] == "true")
+				{
+					array_push($catsToDisplay, "instagram");
+				}
 			}
 			else
 			{
@@ -105,6 +113,26 @@ $gallery = new Gallery();
 				</div>
 					';
 				}
+			}
+
+			//Instagram Image Support
+			if($config->thirdPartyImages->instagram['enabled'] = "true" && in_array("instagram", $catsToDisplay))
+			{
+				include("handlers/curl.php");
+			  include("data/tokens.php");
+
+			  $result = fetchData("https://api.instagram.com/v1/users/".$instagram['userid']."/media/recent/?access_token=".$instagram['token']."&count=".$config->thirdPartyImages->instagram['imagesToDisplay']);
+			  $result = json_decode($result);
+			  foreach ($result->data as $post)
+				{
+					echo '
+				<div class="thumb">
+					<a class="popup" href="'.$post->images->standard_resolution->url.'">
+						<img src="'.$post->images->standard_resolution->url.'" class="media" alt=""/>
+					</a>
+				</div>
+					';
+			  }
 			}
 		}
 		else
