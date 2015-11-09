@@ -29,7 +29,7 @@ You can utilize third party image storing services to display some of your pictu
 
 ## Instagram
 
-You'll need your `client_id` and `access_token` in order to retrieve your images. Someone wrote a script to do that, [here](https://api.instagram.com/oauth/authorize/?client_id=ab103e54c54747ada9e807137db52d77&redirect_uri=http://blueprintinteractive.com/tutorials/instagram/uri.php&response_type=code), but I cannot validate the usage of your data. You can alternatively access those items by reading [this page](https://instagram.com/developer/authentication/).
+You'll need your `user_id` and `access_token` in order to retriece your images. You can use a script I wrote, [instauth](https://github.com/septor/instauth), by going [here](http://septor.xyz/instauth). You can optionally go to the script's page and set it up yourself to make sure I'm not stealing your dataz!
 
 Once you've obtained these items you'll need to open the `/data/tokens.php` file and insert the required information. Now you need to update your `/data/config.xml` file to include the added entries:
 
